@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/logIn">
+
+    <fragment
+        android:id="@+id/logIn"
+        android:name="com.example.cafeconleche.LogIn"
+        android:label="LogIn"
+        tools:layout="@layout/fragment_log_in">
+        <action
+            android:id="@+id/action_logIn_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_logIn_to_plat1"
+            app:destination="@id/plat1"
+            app:popUpTo="@id/logIn" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.cafeconleche.Register"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_logIn"
+            app:destination="@id/logIn" />
+    </fragment>
+    <fragment
+        android:id="@+id/plat1"
+        android:name="com.example.cafeconleche.Plat1"
+        android:label="Plat1"
+        tools:layout="@layout/fragment_plat1">
+        <action
+            android:id="@+id/action_plat1_to_plat2"
+            app:destination="@id/plat2"
+            app:popUpTo="@id/logIn" />
+    </fragment>
+    <fragment
+        android:id="@+id/plat2"
+        android:name="com.example.cafeconleche.Plat2"
+        android:label="Plat2"
+        tools:layout="@layout/fragment_plat2">
+        <action
+            android:id="@+id/action_plat2_to_logIn"
+            app:destination="@id/logIn" />
+    </fragment>
+</navigation>
