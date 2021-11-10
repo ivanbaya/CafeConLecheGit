@@ -10,6 +10,7 @@ import com.example.cafeconleche.databinding.FragmentLogInBinding
 
 
 class LogIn : Fragment() {
+    val EMPTY_VALUE = ""
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentLogInBinding>(inflater,
@@ -17,11 +18,19 @@ class LogIn : Fragment() {
         binding.buttonRegister.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_logIn_to_register)
         }
+        if(isSavedName()){
+                binding.editTextEmail.setText(SharedApp.prefs.name)
+        }
         binding.buttonLogIn.setOnClickListener { view : View ->
             if(binding.editTextEmail.text.toString() == "ivanbaya@gmail.com" && binding.editTextPassword.text.toString() == "patata"){//&& binding.editTextPassword.text.toString() == "patata"
+                SharedApp.prefs.name = binding.editTextEmail.text.toString()
                 view.findNavController().navigate(R.id.action_logIn_to_plat1)
             }
         }
         return binding.root
+    }
+    fun isSavedName():Boolean{
+        val myName = SharedApp.prefs.name
+        return myName != EMPTY_VALUE
     }
 }
