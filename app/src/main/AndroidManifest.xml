@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CafeConLeche">
         <activity
+            android:name=".LlistaPlats"
+            android:exported="false" />
+        <activity
             android:name=".Plat1"
             android:exported="true" />
         <activity

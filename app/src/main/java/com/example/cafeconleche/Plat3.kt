@@ -14,7 +14,7 @@ import com.example.cafeconleche.databinding.FragmentPlat1Binding
 import com.example.cafeconleche.databinding.FragmentPlat2Binding
 import com.example.cafeconleche.databinding.FragmentRegisterBinding
 
-class Plat2 : Fragment() {
+class Plat3 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentPlat2Binding>(
@@ -22,7 +22,7 @@ class Plat2 : Fragment() {
             R.layout.fragment_plat2, container, false
         )
 
-        var options = arrayOf("Bistec", "Hamburguesa", "Macarrones", "Sepia", "Pollo")
+        var options = arrayOf("Natillas", "Yogur", "Polo", "Helado", "Ice cream")
         binding.spinner.adapter = ArrayAdapter(
             requireActivity().applicationContext,
             android.R.layout.simple_list_item_1,
@@ -37,7 +37,7 @@ class Plat2 : Fragment() {
             }
         }
         binding.button.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_plat2_to_plat3)
+            view.findNavController().navigate(R.id.action_plat3_to_llistaPlats)
         }
         setHasOptionsMenu(true)
         return binding.root

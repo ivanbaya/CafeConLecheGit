@@ -35,7 +35,7 @@
         <action
             android:id="@+id/action_plat1_to_plat2"
             app:destination="@id/plat2"
-            app:popUpTo="@id/logIn" />
+            app:popUpTo="@id/plat1" />
     </fragment>
     <fragment
         android:id="@+id/plat2"
@@ -43,7 +43,23 @@
         android:label="Plat2"
         tools:layout="@layout/fragment_plat2">
         <action
-            android:id="@+id/action_plat2_to_logIn"
-            app:destination="@id/logIn" />
+            android:id="@+id/action_plat2_to_plat3"
+            app:destination="@id/plat3"
+            app:popUpTo="@id/plat2" />
     </fragment>
+    <fragment
+        android:id="@+id/plat3"
+        android:name="com.example.cafeconleche.Plat3"
+        android:label="Plat3"
+        tools:layout="@layout/fragment_plat3">
+        <action
+            android:id="@+id/action_plat3_to_llistaPlats"
+            app:destination="@id/llistaPlats"
+            app:popUpTo="@id/plat3" />
+    </fragment>
+    <fragment
+        android:id="@+id/llistaPlats"
+        android:name="com.example.cafeconleche.LlistaPlats"
+        android:label="llistaPlats"
+        tools:layout="@layout/fragment_llista_plats"/>
 </navigation>
