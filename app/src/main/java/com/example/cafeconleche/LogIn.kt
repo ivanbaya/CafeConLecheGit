@@ -22,7 +22,7 @@ class LogIn : Fragment() {
                 binding.editTextEmail.setText(SharedApp.prefs.name)
         }
         binding.buttonLogIn.setOnClickListener { view : View ->
-            if(binding.editTextEmail.text.toString() == "ivanbaya@gmail.com" && binding.editTextPassword.text.toString() == "patata"){//&& binding.editTextPassword.text.toString() == "patata"
+            if(binding.editTextEmail.text.toString() == "ivanbaya@gmail.com" && binding.editTextPassword.text.toString() == "patata"){
                 SharedApp.prefs.name = binding.editTextEmail.text.toString()
                 view.findNavController().navigate(R.id.action_logIn_to_plat1)
             }

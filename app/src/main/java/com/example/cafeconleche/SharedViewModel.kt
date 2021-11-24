@@ -1,20 +1,30 @@
 package com.example.cafeconleche
 
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.*
+import com.example.cafeconleche.database.ComandaDatabaseDAO
+import com.example.cafeconleche.database.LlistaComanda
+import kotlinx.coroutines.launch
 
-class SharedViewModel : ViewModel() {
-    val plat1 = MutableLiveData<String>()
-    val plat2 = MutableLiveData<String>()
-    val postre = MutableLiveData<String>()
+class SharedViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val _plat1 = MutableLiveData<String>()
+    val plat1: LiveData<String>
+        get() = _plat1
+    private val _plat2 = MutableLiveData<String>()
+    val plat2: LiveData<String>
+        get() = _plat2
+    private val _postre = MutableLiveData<String>()
+    val postre: LiveData<String>
+        get() = _postre
 
     fun sendPlat1(text: String) {
-        plat1.value = text
+        _plat1.value = text
     }
     fun sendPlat2(text: String) {
-        plat2.value = text
+        _plat2.value = text
     }
     fun sendPostre(text: String) {
-        postre.value = text
+        _postre.value = text
     }
 }

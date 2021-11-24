@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.cafeconleche.database.ComandaDatabase
 import com.example.cafeconleche.databinding.FragmentPlat1Binding
 import com.example.cafeconleche.databinding.FragmentRegisterBinding
 
