@@ -37,7 +37,7 @@ class LlistaPlats : Fragment() {
             binding.textPostre.text = it
         })
         binding.buttonSave.setOnClickListener { view: View ->
-            llistaPlatsViewModel.novaLlista(LlistaComanda(0L,binding.textPlat1.text.toString(),binding.textPlat2.text.toString(),binding.textPostre.text.toString()))
+            llistaPlatsViewModel.novaLlista(LlistaComanda(0L,binding.textPlat1.text.toString(),binding.textPlat2.text.toString(),binding.textPostre.text.toString(), SharedApp.prefs.name.toString()))
         }
         setHasOptionsMenu(true)
         binding.setLifecycleOwner(this)

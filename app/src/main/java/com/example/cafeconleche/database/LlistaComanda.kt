@@ -17,4 +17,7 @@ data class LlistaComanda(
 
     @ColumnInfo(name = "postre")
     var postre: String,
+
+    @ColumnInfo(name = "usuari")
+    var usuari: String,
 )

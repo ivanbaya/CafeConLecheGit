@@ -1,31 +1,32 @@
-package com.example.cafeconleche.database
+package com.example.cafeconleche.usersDatabase
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [LlistaComanda::class], version = 2, exportSchema = false)
-abstract class ComandaDatabase : RoomDatabase() {
+@Database(entities = [Usuaris::class], version = 1, exportSchema = false)
+abstract class UserDatabase : RoomDatabase() {
 
-    abstract val comandaDatabaseDAO: ComandaDatabaseDAO
+    abstract val userDatabaseDAO: UserDatabaseDAO
 
     companion object {
 
         @Volatile
-        private var INSTANCE: ComandaDatabase? = null
+        private var INSTANCE: UserDatabase? = null
 
-        fun getInstance(context: Context): ComandaDatabase {
+        fun getInstance(context: Context): UserDatabase {
             synchronized(this) {
                 var instance = INSTANCE
 
                 if (instance == null) {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
-                        ComandaDatabase::class.java,
+                        UserDatabase::class.java,
                         "cafeDatabase"
                     )
                         .fallbackToDestructiveMigration()
+                        .allowMainThreadQueries()
                         .build()
                     INSTANCE = instance
                 }

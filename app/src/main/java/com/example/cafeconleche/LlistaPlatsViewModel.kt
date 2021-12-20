@@ -18,7 +18,7 @@ class LlistaPlatsViewModel(
             insert(llista)
         }
     }
-    suspend fun insert(llista : LlistaComanda) {
+    private suspend fun insert(llista : LlistaComanda) {
         database.insert(llista)
     }
 }
