@@ -62,4 +62,8 @@
         android:name="com.example.cafeconleche.LlistaPlats"
         android:label="llistaPlats"
         tools:layout="@layout/fragment_llista_plats"/>
+    <fragment
+        android:id="@+id/ordenesLista"
+        android:name="com.example.cafeconleche.OrdenesLista"
+        android:label="OrdenesLista" />
 </navigation>

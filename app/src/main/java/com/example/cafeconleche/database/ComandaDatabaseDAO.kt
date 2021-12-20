@@ -25,5 +25,5 @@ interface ComandaDatabaseDAO {
     suspend fun getLlista(): LlistaComanda?
 
     @Query("SELECT * FROM llista_comanda ORDER BY comandaId DESC")
-    fun getAllLlistes(): LiveData<List<LlistaComanda>>
+    fun getAllLlistes(): List<LlistaComanda>
 }
