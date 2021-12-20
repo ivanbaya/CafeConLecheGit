@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/logIn"
-        android:name="com.example.cafeconleche.LogIn"
+        android:name="com.example.cafeconleche.logIn.LogIn"
         android:label="LogIn"
         tools:layout="@layout/fragment_log_in">
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/register"
-        android:name="com.example.cafeconleche.Register"
+        android:name="com.example.cafeconleche.logIn.Register"
         android:label="Register"
         tools:layout="@layout/fragment_register">
         <action

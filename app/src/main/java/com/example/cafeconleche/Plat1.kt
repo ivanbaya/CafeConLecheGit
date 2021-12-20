@@ -8,28 +8,25 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.cafeconleche.database.ComandaDatabase
 import com.example.cafeconleche.databinding.FragmentPlat1Binding
 import com.example.cafeconleche.databinding.FragmentRegisterBinding
 
 class Plat1 : Fragment() {
+    lateinit var model: SharedViewModel
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentPlat1Binding>(inflater,
             R.layout.fragment_plat1,container,false)
 
         var options = arrayOf("Gazpacho","Sopa","Ensalada")
+        model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         binding.spinner.adapter = ArrayAdapter(requireActivity().applicationContext, android.R.layout.simple_list_item_1,options)
-        binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-
-            }
-            override fun onNothingSelected(parent: AdapterView<*>?){
-
-            }
-        }
         binding.buttonSiguiente.setOnClickListener { view : View ->
+            model.sendPlat1(binding.spinner.getSelectedItem().toString())
             view.findNavController().navigate(R.id.action_plat1_to_plat2)
         }
         setHasOptionsMenu(true)
