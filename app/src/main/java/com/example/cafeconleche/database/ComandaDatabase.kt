@@ -26,6 +26,7 @@ abstract class ComandaDatabase : RoomDatabase() {
                         "cafeDatabase"
                     )
                         .fallbackToDestructiveMigration()
+                        .allowMainThreadQueries()
                         .build()
                     INSTANCE = instance
                 }
