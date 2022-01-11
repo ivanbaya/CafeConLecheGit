@@ -13,7 +13,7 @@ class LlistaPlatsViewModel(
     val database: ComandaDatabaseDAO,
     application: Application) : AndroidViewModel(application) {
 
-    val comandas = database.getAllLlistes()
+    val comandas = database.getAllLlistes(SharedApp.prefs.name.toString())
 
     fun novaLlista(llista : LlistaComanda) {
         viewModelScope.launch {

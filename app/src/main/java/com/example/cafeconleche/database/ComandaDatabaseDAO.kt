@@ -10,20 +10,20 @@ import androidx.room.Update
 interface ComandaDatabaseDAO {
 
     @Insert
-    suspend fun insert(llista: LlistaComanda)
+    fun insert(llista: LlistaComanda)
 
     @Update
-    suspend fun update(llista: LlistaComanda)
+    fun update(llista: LlistaComanda)
 
     @Query("SELECT * from llista_comanda WHERE comandaId = :key")
-    suspend fun get(key: Long): LlistaComanda?
+    fun get(key: Long): LlistaComanda?
 
     @Query("DELETE FROM llista_comanda")
-    suspend fun clear()
+    fun clear()
 
     @Query("SELECT * FROM llista_comanda ORDER BY comandaId DESC LIMIT 1")
-    suspend fun getLlista(): LlistaComanda?
+    fun getLlista(): LlistaComanda?
 
-    @Query("SELECT * FROM llista_comanda ORDER BY comandaId DESC")
-    fun getAllLlistes(): List<LlistaComanda>
+    @Query("SELECT * FROM llista_comanda WHERE usuari=:usuari ORDER BY comandaId DESC")
+    fun getAllLlistes(usuari: String): List<LlistaComanda>
 }

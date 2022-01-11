@@ -10,13 +10,13 @@ import androidx.room.Update
 interface UserDatabaseDAO {
 
     @Insert
-    suspend fun insert(user: Usuaris)
+    fun insert(user: Usuaris)
 
     @Update
-    suspend fun update(user: Usuaris)
+    fun update(user: Usuaris)
 
     @Query("SELECT * from usuari WHERE email = :key")
-    suspend fun get(key: String): Usuaris?
+    fun get(key: String): Usuaris?
 
     @Query("SELECT EXISTS(SELECT * from usuari WHERE email = :key)")
     fun comprobar(key: String): Boolean
@@ -25,10 +25,10 @@ interface UserDatabaseDAO {
     fun logIn(user: String, pass: String): Boolean
 
     @Query("DELETE FROM usuari")
-    suspend fun clear()
+    fun clear()
 
     @Query("SELECT * FROM usuari ORDER BY email DESC LIMIT 1")
-    suspend fun getLlista(): Usuaris?
+    fun getLlista(): Usuaris?
 
     @Query("SELECT * FROM usuari ORDER BY email DESC")
     fun getAllUsuaris(): List<Usuaris>

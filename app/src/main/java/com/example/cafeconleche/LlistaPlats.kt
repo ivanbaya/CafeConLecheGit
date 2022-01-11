@@ -11,6 +11,7 @@ import androidx.navigation.ui.NavigationUI
 import com.example.cafeconleche.database.ComandaDatabase
 import com.example.cafeconleche.database.LlistaComanda
 import com.example.cafeconleche.databinding.FragmentLlistaPlatsBinding
+import java.util.*
 
 class LlistaPlats : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +38,7 @@ class LlistaPlats : Fragment() {
             binding.textPostre.text = it
         })
         binding.buttonSave.setOnClickListener { view: View ->
-            llistaPlatsViewModel.novaLlista(LlistaComanda(0L,binding.textPlat1.text.toString(),binding.textPlat2.text.toString(),binding.textPostre.text.toString(), SharedApp.prefs.name.toString()))
+            llistaPlatsViewModel.novaLlista(LlistaComanda(0L,binding.textPlat1.text.toString(),binding.textPlat2.text.toString(),binding.textPostre.text.toString(), SharedApp.prefs.name.toString(), Calendar.getInstance().getTime().toString(), 5.0))
         }
         setHasOptionsMenu(true)
         binding.setLifecycleOwner(this)

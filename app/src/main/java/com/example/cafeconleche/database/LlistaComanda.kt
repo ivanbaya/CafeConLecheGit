@@ -20,4 +20,10 @@ data class LlistaComanda(
 
     @ColumnInfo(name = "usuari")
     var usuari: String,
+
+    @ColumnInfo(name = "data")
+    var data: String,
+
+    @ColumnInfo(name = "preu")
+    var preu: Double,
 )
