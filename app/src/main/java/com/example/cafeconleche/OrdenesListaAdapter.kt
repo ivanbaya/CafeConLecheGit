@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cafeconleche.database.LlistaComanda
-import com.example.cafeconleche.menjarDatabase.LlistaMenjars
 
 class OrdenesListaAdapter(private val context: Context,
                           private val list: List<LlistaComanda>

@@ -10,7 +10,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cafeconleche.databinding.FragmentPlat1Binding
-import com.example.cafeconleche.menjarDatabase.MenjarDatabase
+import com.example.cafeconleche.usersDatabase.GetDatabase
 
 class Plat1 : Fragment() {
     lateinit var model: SharedViewModel
@@ -20,7 +20,7 @@ class Plat1 : Fragment() {
             R.layout.fragment_plat1,container,false)
 
         val application = requireNotNull(this.activity).application
-        val dataSource = MenjarDatabase.getInstance(application).menjarDatabaseDAO
+        val dataSource = GetDatabase.getInstance(application).menjarDatabaseDAO
         val viewModelFactory = PlatsViewModelFactory(dataSource, application)
 
         val menjarsPlatsViewModel =

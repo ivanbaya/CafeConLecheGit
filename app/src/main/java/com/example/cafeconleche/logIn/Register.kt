@@ -9,13 +9,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import com.example.cafeconleche.LlistaPlatsViewModel
-import com.example.cafeconleche.LlistaPlatsViewModelFactory
 import com.example.cafeconleche.R
-import com.example.cafeconleche.database.ComandaDatabase
-import com.example.cafeconleche.database.LlistaComanda
 import com.example.cafeconleche.databinding.FragmentRegisterBinding
-import com.example.cafeconleche.usersDatabase.UserDatabase
+import com.example.cafeconleche.usersDatabase.GetDatabase
 import com.example.cafeconleche.usersDatabase.Usuaris
 
 
@@ -29,7 +25,7 @@ class Register : Fragment() {
         }
 
         val application = requireNotNull(this.activity).application
-        val dataSource = UserDatabase.getInstance(application).userDatabaseDAO
+        val dataSource = GetDatabase.getInstance(application).userDatabaseDAO
         val viewModelFactory = UsuarisViewModelFactory(dataSource, application)
 
         val llistaUsersViewModel =

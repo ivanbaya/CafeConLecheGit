@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cafeconleche.menjarDatabase.LlistaMenjars
+import com.example.cafeconleche.menjarDatabase.Menjar
 
 class PlatsAdapter(private val context: Context,
-                   private val list: List<LlistaMenjars>): RecyclerView.Adapter<PlatsAdapter.ViewHolder>() {
+                   private val list: List<Menjar>): RecyclerView.Adapter<PlatsAdapter.ViewHolder>() {
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val nom: TextView = view.findViewById(R.id.nomTextView)
         val desc: TextView = view.findViewById(R.id.descTextView)
