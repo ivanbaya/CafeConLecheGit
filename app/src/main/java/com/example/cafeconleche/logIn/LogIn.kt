@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.cafeconleche.R
-import com.example.cafeconleche.SharedApp
+import com.example.cafeconleche.prefs.SharedApp
 import com.example.cafeconleche.databinding.FragmentLogInBinding
-import com.example.cafeconleche.usersDatabase.GetDatabase
+import com.example.cafeconleche.database.GetDatabase
 
 
 class LogIn : Fragment() {

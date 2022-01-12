@@ -2,9 +2,6 @@ package com.example.cafeconleche
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.example.cafeconleche.database.ComandaDatabaseDAO
-import com.example.cafeconleche.database.LlistaComanda
-import kotlinx.coroutines.launch
 
 class SharedViewModel(application: Application) : AndroidViewModel(application) {
 

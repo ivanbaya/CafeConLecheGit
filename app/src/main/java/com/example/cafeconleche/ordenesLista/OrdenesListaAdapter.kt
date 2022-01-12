@@ -1,4 +1,4 @@
-package com.example.cafeconleche
+package com.example.cafeconleche.ordenesLista
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cafeconleche.database.LlistaComanda
+import com.example.cafeconleche.R
+import com.example.cafeconleche.database.comanda.LlistaComanda
 
 class OrdenesListaAdapter(private val context: Context,
                           private val list: List<LlistaComanda>

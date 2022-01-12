@@ -1,4 +1,4 @@
-package com.example.cafeconleche
+package com.example.cafeconleche.prefs
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -1,9 +1,9 @@
-package com.example.cafeconleche
+package com.example.cafeconleche.llistaPlats
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.cafeconleche.database.ComandaDatabaseDAO
+import com.example.cafeconleche.database.comanda.ComandaDatabaseDAO
 
 class LlistaPlatsViewModelFactory(
     private val dataSource: ComandaDatabaseDAO,

@@ -1,10 +1,9 @@
-package com.example.cafeconleche
+package com.example.cafeconleche.plats
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.cafeconleche.database.ComandaDatabaseDAO
-import com.example.cafeconleche.menjarDatabase.MenjarDatabaseDAO
+import com.example.cafeconleche.database.menjar.MenjarDatabaseDAO
 
 class PlatsViewModelFactory(
     private val dataSource: MenjarDatabaseDAO,

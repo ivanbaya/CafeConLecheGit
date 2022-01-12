@@ -1,4 +1,4 @@
-package com.example.cafeconleche.menjarDatabase
+package com.example.cafeconleche.database.menjar
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

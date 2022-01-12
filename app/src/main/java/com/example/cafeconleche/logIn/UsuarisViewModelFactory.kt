@@ -3,8 +3,7 @@ package com.example.cafeconleche.logIn
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.cafeconleche.database.ComandaDatabaseDAO
-import com.example.cafeconleche.usersDatabase.UserDatabaseDAO
+import com.example.cafeconleche.database.user.UserDatabaseDAO
 
 class UsuarisViewModelFactory(
     private val dataSource: UserDatabaseDAO,

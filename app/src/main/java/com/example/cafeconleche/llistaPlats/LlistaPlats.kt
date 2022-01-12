@@ -1,4 +1,4 @@
-package com.example.cafeconleche
+package com.example.cafeconleche.llistaPlats
 
 import android.os.Bundle
 import android.view.*
@@ -8,9 +8,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.cafeconleche.database.ComandaDatabase
-import com.example.cafeconleche.database.LlistaComanda
+import com.example.cafeconleche.*
+import com.example.cafeconleche.database.GetDatabase
+import com.example.cafeconleche.database.comanda.LlistaComanda
 import com.example.cafeconleche.databinding.FragmentLlistaPlatsBinding
+import com.example.cafeconleche.prefs.SharedApp
 import java.util.*
 
 class LlistaPlats : Fragment() {
@@ -21,7 +23,7 @@ class LlistaPlats : Fragment() {
         val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
         val application = requireNotNull(this.activity).application
-        val dataSource = ComandaDatabase.getInstance(application).comandaDatabaseDAO
+        val dataSource = GetDatabase.getInstance(application).comandaDatabaseDAO()
         val viewModelFactory = LlistaPlatsViewModelFactory(dataSource, application)
 
         val llistaPlatsViewModel =

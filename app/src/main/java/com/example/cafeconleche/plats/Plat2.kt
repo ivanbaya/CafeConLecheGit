@@ -1,19 +1,16 @@
-package com.example.cafeconleche
+package com.example.cafeconleche.plats
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.cafeconleche.databinding.FragmentPlat1Binding
+import com.example.cafeconleche.R
+import com.example.cafeconleche.SharedViewModel
 import com.example.cafeconleche.databinding.FragmentPlat2Binding
-import com.example.cafeconleche.databinding.FragmentRegisterBinding
 
 class Plat2 : Fragment() {
     lateinit var model: SharedViewModel

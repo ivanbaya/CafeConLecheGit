@@ -2,11 +2,9 @@ package com.example.cafeconleche.logIn
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.cafeconleche.database.ComandaDatabaseDAO
-import com.example.cafeconleche.usersDatabase.UserDatabaseDAO
-import com.example.cafeconleche.usersDatabase.Usuaris
+import com.example.cafeconleche.database.user.UserDatabaseDAO
+import com.example.cafeconleche.database.user.Usuaris
 import kotlinx.coroutines.launch
 
 class UsuarisViewModel(

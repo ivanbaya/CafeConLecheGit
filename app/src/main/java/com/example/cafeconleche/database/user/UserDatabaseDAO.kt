@@ -1,6 +1,5 @@
-package com.example.cafeconleche.usersDatabase
+package com.example.cafeconleche.database.user
 
-import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query

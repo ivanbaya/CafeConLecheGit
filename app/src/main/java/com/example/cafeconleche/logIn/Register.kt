@@ -11,8 +11,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.cafeconleche.R
 import com.example.cafeconleche.databinding.FragmentRegisterBinding
-import com.example.cafeconleche.usersDatabase.GetDatabase
-import com.example.cafeconleche.usersDatabase.Usuaris
+import com.example.cafeconleche.database.GetDatabase
+import com.example.cafeconleche.database.user.Usuaris
 
 
 class Register : Fragment() {

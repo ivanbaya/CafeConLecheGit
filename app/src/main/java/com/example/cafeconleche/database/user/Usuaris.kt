@@ -1,4 +1,4 @@
-package com.example.cafeconleche.usersDatabase
+package com.example.cafeconleche.database.user
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

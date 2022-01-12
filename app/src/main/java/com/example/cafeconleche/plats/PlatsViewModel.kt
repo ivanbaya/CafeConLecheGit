@@ -1,10 +1,10 @@
-package com.example.cafeconleche
+package com.example.cafeconleche.plats
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.cafeconleche.menjarDatabase.Menjar
-import com.example.cafeconleche.menjarDatabase.MenjarDatabaseDAO
+import com.example.cafeconleche.database.menjar.Menjar
+import com.example.cafeconleche.database.menjar.MenjarDatabaseDAO
 import kotlinx.coroutines.launch
 
 class PlatsViewModel(
