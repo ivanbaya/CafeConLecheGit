@@ -28,5 +28,5 @@ interface MenjarDatabaseDAO {
     fun getAllMenjars(tipus: String): List<Menjar>
 
     @Insert
-    fun insertAll(articles: Array<Menjar>)
+    fun insertAll(menjars: Array<Menjar>)
 }

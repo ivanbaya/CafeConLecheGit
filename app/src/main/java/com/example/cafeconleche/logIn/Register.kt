@@ -25,7 +25,7 @@ class Register : Fragment() {
         }
 
         val application = requireNotNull(this.activity).application
-        val dataSource = GetDatabase.getInstance(application).userDatabaseDAO
+        val dataSource = GetDatabase.getInstance(application).userDatabaseDAO()
         val viewModelFactory = UsuarisViewModelFactory(dataSource, application)
 
         val llistaUsersViewModel =

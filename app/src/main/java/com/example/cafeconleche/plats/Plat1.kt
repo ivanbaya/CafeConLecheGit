@@ -2,6 +2,7 @@ package com.example.cafeconleche.plats
 
 import android.os.Bundle
 import android.view.*
+import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -25,6 +26,7 @@ class Plat1 : Fragment() {
         val dataSource = GetDatabase.getInstance(application).menjarDatabaseDAO()
         val viewModelFactory = PlatsViewModelFactory(dataSource, application)
 
+
         val menjarsPlatsViewModel =
             ViewModelProvider(
                 this, viewModelFactory).get(PlatsViewModel::class.java)
@@ -35,7 +37,13 @@ class Plat1 : Fragment() {
             application,
             menjarsPlatsViewModel.menjarsPlat1
         )
+        setHasOptionsMenu(true)
         return binding.root
+    }
+    companion object fun selectMenjar(plat: String, view: View){
+        model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+        model.sendPlat1(plat)
+        view.findNavController().navigate(R.id.action_plat2_to_plat3)
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
