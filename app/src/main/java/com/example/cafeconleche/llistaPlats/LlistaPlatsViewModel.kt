@@ -1,12 +1,11 @@
-package com.example.cafeconleche
+package com.example.cafeconleche.llistaPlats
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
 import androidx.lifecycle.viewModelScope
-import com.example.cafeconleche.database.ComandaDatabaseDAO
-import com.example.cafeconleche.database.LlistaComanda
+import com.example.cafeconleche.prefs.SharedApp
+import com.example.cafeconleche.database.comanda.ComandaDatabaseDAO
+import com.example.cafeconleche.database.comanda.LlistaComanda
 import kotlinx.coroutines.launch
 
 class LlistaPlatsViewModel(

@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/plat1"
-        android:name="com.example.cafeconleche.Plat1"
+        android:name="com.example.cafeconleche.plats.Plat1"
         android:label="Plat1"
         tools:layout="@layout/fragment_plat1">
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/plat2"
-        android:name="com.example.cafeconleche.Plat2"
+        android:name="com.example.cafeconleche.plats.Plat2"
         android:label="Plat2"
         tools:layout="@layout/fragment_plat2">
         <action
@@ -49,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/plat3"
-        android:name="com.example.cafeconleche.Plat3"
+        android:name="com.example.cafeconleche.plats.Plat3"
         android:label="Plat3"
         tools:layout="@layout/fragment_plat3">
         <action
@@ -59,11 +59,15 @@
     </fragment>
     <fragment
         android:id="@+id/llistaPlats"
-        android:name="com.example.cafeconleche.LlistaPlats"
+        android:name="com.example.cafeconleche.llistaPlats.LlistaPlats"
         android:label="llistaPlats"
-        tools:layout="@layout/fragment_llista_plats"/>
+        tools:layout="@layout/fragment_llista_plats">
+        <action
+            android:id="@+id/action_llistaPlats_to_ordenesLista"
+            app:destination="@id/ordenesLista" />
+    </fragment>
     <fragment
         android:id="@+id/ordenesLista"
-        android:name="com.example.cafeconleche.OrdenesLista"
+        android:name="com.example.cafeconleche.ordenesLista.OrdenesLista"
         android:label="OrdenesLista" />
 </navigation>

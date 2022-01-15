@@ -1,15 +1,17 @@
-package com.example.cafeconleche
+package com.example.cafeconleche.ordenesLista
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cafeconleche.database.ComandaDatabase
+import com.example.cafeconleche.R
+import com.example.cafeconleche.database.GetDatabase
 import com.example.cafeconleche.databinding.FragmentOrdenesListaBinding
+import com.example.cafeconleche.llistaPlats.LlistaPlatsViewModel
+import com.example.cafeconleche.llistaPlats.LlistaPlatsViewModelFactory
 
 
 class OrdenesLista : Fragment() {
@@ -20,7 +22,7 @@ class OrdenesLista : Fragment() {
         binding.setLifecycleOwner(this)
 
         val application = requireNotNull(this.activity).application
-        val dataSource = ComandaDatabase.getInstance(application).comandaDatabaseDAO
+        val dataSource = GetDatabase.getInstance(application).comandaDatabaseDAO()
         val viewModelFactory = LlistaPlatsViewModelFactory(dataSource, application)
 
         val llistaPlatsViewModel =
@@ -29,7 +31,7 @@ class OrdenesLista : Fragment() {
 
         val recyclerView: RecyclerView = binding.recyclerView
         recyclerView.layoutManager= LinearLayoutManager(this.activity)
-        recyclerView.adapter=OrdenesListaAdapter(
+        recyclerView.adapter= OrdenesListaAdapter(
             application,
             llistaPlatsViewModel.comandas
         )

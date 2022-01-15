@@ -12,7 +12,7 @@
             android:id="@+id/textView8"
             android:layout_width="66dp"
             android:layout_height="29dp"
-            android:text="Plat1"
+            android:text="Plat 1"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="24sp"
@@ -21,8 +21,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="644dp"
             android:textAlignment="center"
             tools:context=".Plat1Fragment"></androidx.recyclerview.widget.RecyclerView>
+
     </LinearLayout>
 </layout>

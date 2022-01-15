@@ -1,21 +1,22 @@
-package com.example.cafeconleche
+package com.example.cafeconleche.plats
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.cafeconleche.databinding.FragmentPlat1Binding
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.cafeconleche.R
+import com.example.cafeconleche.database.GetDatabase
 import com.example.cafeconleche.databinding.FragmentPlat2Binding
-import com.example.cafeconleche.databinding.FragmentRegisterBinding
 
-class Plat2 : Fragment() {
+class Plat3 : Fragment() {
     lateinit var model: SharedViewModel
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -23,18 +24,29 @@ class Plat2 : Fragment() {
             inflater,
             R.layout.fragment_plat2, container, false
         )
+        val application = requireNotNull(this.activity).application
+        val dataSource = GetDatabase.getInstance(application).menjarDatabaseDAO()
+        val viewModelFactory = PlatsViewModelFactory(dataSource, application)
 
-        var options = arrayOf("Bistec", "Hamburguesa", "Macarrones", "Sepia", "Pollo")
         model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-        binding.spinner.adapter = ArrayAdapter(
-            requireActivity().applicationContext,
-            android.R.layout.simple_list_item_1,
-            options
+        model.setnullPlat3()
+        model.postre.observe(viewLifecycleOwner, Observer {
+            if (it != null) {
+                this.findNavController().navigate(R.id.action_plat3_to_llistaPlats)
+            }
+        })
+
+        val menjarsPlatsViewModel =
+            ViewModelProvider(
+                this, viewModelFactory).get(PlatsViewModel::class.java)
+
+        val recyclerView: RecyclerView = binding.recyclerView
+        recyclerView.layoutManager= LinearLayoutManager(this.activity)
+        recyclerView.adapter= PlatsAdapter(
+            application,
+            menjarsPlatsViewModel.menjarsPostre, model
         )
-        binding.button.setOnClickListener { view: View ->
-            model.sendPlat2(binding.spinner.getSelectedItem().toString())
-            view.findNavController().navigate(R.id.action_plat2_to_plat3)
-        }
+
         setHasOptionsMenu(true)
         return binding.root
     }

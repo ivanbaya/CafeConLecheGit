@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CafeConLeche"
-        android:name=".SharedApp">
+        android:name=".prefs.SharedApp">
         <activity
-            android:name=".LlistaPlats"
+            android:name=".llistaPlats.LlistaPlats"
             android:exported="false" />
         <activity
-            android:name=".Plat1"
+            android:name=".plats.Plat1"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
