@@ -13,9 +13,11 @@ class OrdenesListaAdapter(private val context: Context,
                           private val list: List<LlistaComanda>
 ): RecyclerView.Adapter<OrdenesListaAdapter.ViewHolder>() {
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val plat1: TextView = view.findViewById(R.id.nomTextView)
-        val plat2: TextView = view.findViewById(R.id.descTextView)
-        val postre: TextView = view.findViewById(R.id.preuTextView)
+        val plat1: TextView = view.findViewById(R.id.plat1TextView)
+        val plat2: TextView = view.findViewById(R.id.plat2TextView)
+        val postre: TextView = view.findViewById(R.id.postreTextView)
+        val preu: TextView = view.findViewById(R.id.preuTextView)
+        val data: TextView = view.findViewById(R.id.dataTextView)
     }
 
 
@@ -33,5 +35,7 @@ class OrdenesListaAdapter(private val context: Context,
         holder.plat1.text = data.plat1
         holder.plat2.text = data.plat2
         holder.postre.text = data.postre
+        holder.preu.text = data.preu.toString()
+        holder.data.text = data.data
     }
 }

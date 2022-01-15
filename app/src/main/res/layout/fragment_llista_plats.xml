@@ -12,19 +12,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Plat1"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.337" />
+            app:layout_constraintVertical_bias="0.292" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="44dp"
             android:text="Plat2"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,9 +36,11 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="44dp"
             android:text="Postre"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -44,7 +48,7 @@
             android:id="@+id/textPostre"
             android:layout_width="217dp"
             android:layout_height="0dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="4dp"
             android:autoText="false"
             android:text="TextView"
             android:textAlignment="center"
@@ -56,9 +60,10 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="96dp"
             android:text="Platos"
             android:textSize="30dp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -67,12 +72,12 @@
             android:id="@+id/textPlat1"
             android:layout_width="228dp"
             android:layout_height="17dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="8dp"
             android:autoText="false"
             android:text="TextView"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -80,14 +85,24 @@
             android:id="@+id/textPlat2"
             android:layout_width="229dp"
             android:layout_height="19dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="4dp"
             android:autoText="false"
             android:text="TextView"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textViewPreu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPostre" />
 
         <Button
             android:id="@+id/buttonSave"

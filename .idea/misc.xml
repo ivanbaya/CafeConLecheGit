@@ -13,30 +13,14 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLeche/app/src/main/res/layout/fragment_plat2.xml" value="0.2" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLeche/app/src/main/res/layout/fragment_register.xml" value="0.264" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLeche/app/src/main/res/menu/options_menu.xml" value="0.264" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/drawable/list_item_ordenes.xml" value="0.2703125" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/drawable/splashscreen.xml" value="0.2703125" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/drawable/text_item_view.xml" value="0.2703125" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/activity_splash_screen.xml" value="0.2504528985507246" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_llista_plats.xml" value="0.27472527472527475" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_log_in.xml" value="0.2504528985507246" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_ordenes_lista.xml" value="0.2504528985507246" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_plat1.xml" value="0.264" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_plat2.xml" value="0.264" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_plat3.xml" value="0.264" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_register.xml" value="0.16" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/list_item_ordenes.xml" value="0.23278985507246377" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/activity_splash_screen.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_llista_plats.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_log_in.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_ordenes_lista.xml" value="0.21354166666666666" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_plat1.xml" value="0.33" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_plat2.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_plat3.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_register.xml" value="0.25" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/list_item_ordenes.xml" value="0.5" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/CafeConLecheGit/app/src/main/res/layout/list_menjar.xml" value="0.33" />
+        <entry key="..\:/Users/ivanb/StudioProjects/CafeConLecheGit/app/src/main/res/layout/activity_llista_plats.xml" value="0.33" />
+        <entry key="..\:/Users/ivanb/StudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_llista_plats.xml" value="0.25" />
+        <entry key="..\:/Users/ivanb/StudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_log_in.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/ivanb/StudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_plat1.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/ivanb/StudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_plat2.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/ivanb/StudioProjects/CafeConLecheGit/app/src/main/res/layout/fragment_plat3.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/ivanb/StudioProjects/CafeConLecheGit/app/src/main/res/layout/list_item_ordenes.xml" value="0.33" />
+        <entry key="..\:/Users/ivanb/StudioProjects/CafeConLecheGit/app/src/main/res/layout/list_menjar.xml" value="0.67" />
       </map>
     </option>
   </component>

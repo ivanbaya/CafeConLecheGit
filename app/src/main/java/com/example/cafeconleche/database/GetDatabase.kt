@@ -13,7 +13,7 @@ import com.example.cafeconleche.database.user.UserDatabaseDAO
 import com.example.cafeconleche.database.user.Usuaris
 import java.util.concurrent.Executors
 
-@Database(entities = [Usuaris::class, Menjar::class, LlistaComanda::class], version = 3, exportSchema = false)
+@Database(entities = [Usuaris::class, Menjar::class, LlistaComanda::class], version = 6, exportSchema = false)
 abstract class GetDatabase : RoomDatabase() {
 
     abstract fun userDatabaseDAO(): UserDatabaseDAO

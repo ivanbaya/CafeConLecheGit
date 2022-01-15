@@ -61,7 +61,11 @@
         android:id="@+id/llistaPlats"
         android:name="com.example.cafeconleche.llistaPlats.LlistaPlats"
         android:label="llistaPlats"
-        tools:layout="@layout/fragment_llista_plats"/>
+        tools:layout="@layout/fragment_llista_plats">
+        <action
+            android:id="@+id/action_llistaPlats_to_ordenesLista"
+            app:destination="@id/ordenesLista" />
+    </fragment>
     <fragment
         android:id="@+id/ordenesLista"
         android:name="com.example.cafeconleche.ordenesLista.OrdenesLista"
